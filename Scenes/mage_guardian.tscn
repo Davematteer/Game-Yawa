@@ -218,6 +218,6 @@ animations = [{
 position = Vector2(0, -28)
 sprite_frames = SubResource("SpriteFrames_1eug2")
 animation = &"first"
-frame_progress = 0.15581144
+frame_progress = 0.6931378
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=428078162]
