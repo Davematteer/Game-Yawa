@@ -1,19 +1,56 @@
 [gd_scene format=3 uid="uid://dd3ycmokrfbgk"]
 
+[ext_resource type="Script" uid="uid://dwcsfj3wjtyys" path="res://Scripts/main_menu.gd" id="1_8i1on"]
 [ext_resource type="Texture2D" uid="uid://11r23tv1rgtv" path="res://Scenes/menu3.png" id="1_ro7et"]
+[ext_resource type="Texture2D" uid="uid://c500i05cdv10" path="res://Scenes/ui/2cc513924fd144b6b7d49fa369d9b4b4/Buttons.png" id="2_5qyac"]
+[ext_resource type="FontFile" uid="uid://coc2xem08bub7" path="res://Scenes/ui/font/Harmonic.ttf" id="3_sdhxm"]
+[ext_resource type="PackedScene" uid="uid://b4ty2tnewtj3o" path="res://Scenes/ui/Main_menu/fade_transition.tscn" id="5_8h8w5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxuwx"]
 texture = ExtResource("1_ro7et")
 modulate_color = Color(0.35906893, 0.35906914, 0.35906902, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxuwx"]
-bg_color = Color(1, 1, 1, 1)
-corner_radius_top_left = 7
-corner_radius_top_right = 7
-corner_radius_bottom_right = 7
-corner_radius_bottom_left = 7
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sdhxm"]
+load_path = "res://.godot/imported/Buttons.png-877dafe1bf80303b502f5092e0894919.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2p3b"]
+atlas = SubResource("CompressedTexture2D_sdhxm")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5qyac"]
+load_path = "res://.godot/imported/Buttons.png-877dafe1bf80303b502f5092e0894919.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h8w5"]
+atlas = SubResource("CompressedTexture2D_5qyac")
+region = Rect2(64, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r6oh"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(48, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4dpvi"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4mkx"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfdx1"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(16, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sdhxm"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i1on"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(96, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ryekl"]
+atlas = ExtResource("2_5qyac")
+region = Rect2(80, 32, 16, 16)
 
 [node name="MainMenu" type="Control" unique_id=747957155]
 layout_mode = 3
@@ -22,6 +59,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8i1on")
 
 [node name="Panel" type="Panel" parent="." unique_id=1945530304]
 layout_mode = 1
@@ -32,42 +70,88 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_qxuwx")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=516390143]
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1994711964]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -75.75
-offset_top = -56.0
-offset_right = 75.75
-offset_bottom = 56.0
+offset_left = -68.0
+offset_top = 60.0
+offset_right = -12.0
+offset_bottom = 76.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
 theme_override_constants/separation = 4
 
-[node name="Button" type="Button" parent="VBoxContainer" unique_id=108692936]
+[node name="Options" type="TextureButton" parent="HBoxContainer" unique_id=1960256447]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxuwx")
-text = "Start"
+size_flags_horizontal = 0
+texture_normal = SubResource("AtlasTexture_i2p3b")
+texture_pressed = SubResource("AtlasTexture_8h8w5")
+texture_hover = SubResource("AtlasTexture_8r6oh")
 
-[node name="Button2" type="Button" parent="VBoxContainer" unique_id=787683580]
+[node name="Play" type="TextureButton" parent="HBoxContainer" unique_id=1775330546]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxuwx")
-text = "Option
-"
+size_flags_horizontal = 0
+texture_normal = SubResource("AtlasTexture_4dpvi")
+texture_pressed = SubResource("AtlasTexture_b4mkx")
+texture_hover = SubResource("AtlasTexture_bfdx1")
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1843821356]
+[node name="Restart" type="TextureButton" parent="HBoxContainer" unique_id=880665461]
 layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 14
-theme_override_styles/normal = SubResource("StyleBoxFlat_qxuwx")
-text = "Exit"
+size_flags_horizontal = 0
+texture_normal = SubResource("AtlasTexture_sdhxm")
+texture_pressed = SubResource("AtlasTexture_8i1on")
+texture_hover = SubResource("AtlasTexture_ryekl")
+
+[node name="Label" type="Label" parent="." unique_id=1228502458]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.0
+offset_top = 107.0
+offset_right = 93.0
+offset_bottom = 190.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.70424277, 0.84068847, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_constants/shadow_offset_y = 9
+theme_override_fonts/font = ExtResource("3_sdhxm")
+theme_override_font_sizes/font_size = 80
+text = "Amani"
+
+[node name="Label2" type="Label" parent="." unique_id=599070544]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.8365541, 0.90051687, 0.9999996, 1)
+theme_override_colors/font_shadow_color = Color(0.011702106, 0.011702109, 0.011702107, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_fonts/font = ExtResource("3_sdhxm")
+theme_override_font_sizes/font_size = 15
+text = "By Game Yawa"
+
+[node name="Fade_transition" parent="." unique_id=1839511524 instance=ExtResource("5_8h8w5")]
+visible = false
+layout_mode = 1
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition" unique_id=1785964554]
+
+[connection signal="pressed" from="HBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="HBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="HBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
