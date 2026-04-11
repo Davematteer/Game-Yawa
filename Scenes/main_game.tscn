@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://dxmgkyifdvvh5"]
 
+[ext_resource type="Script" uid="uid://dnqx1xwue70wg" path="res://Scripts/main_game.gd" id="1_73nn6"]
 [ext_resource type="PackedScene" uid="uid://bh72373a0a2ui" path="res://Scenes/player.tscn" id="1_l756w"]
 [ext_resource type="Texture2D" uid="uid://dm6cmy7foes7y" path="res://Tiles/L1Map/TX Tileset Grass.png" id="2_0e3vx"]
 [ext_resource type="Texture2D" uid="uid://12imbg3y7l7h" path="res://Tiles/L1Map/TX Tileset Wall.png" id="3_6j5ir"]
@@ -7,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://l5p4hclbap8i" path="res://Scenes/obelisk.tscn" id="5_mgc0q"]
 [ext_resource type="PackedScene" uid="uid://dkalxe8appf30" path="res://Scenes/mage_guardian.tscn" id="6_bb2iq"]
 [ext_resource type="PackedScene" uid="uid://dn86vjmw110ec" path="res://Scenes/mutant.tscn" id="7_18r40"]
-[ext_resource type="PackedScene" uid="uid://dd3ycmokrfbgk" path="res://Scenes/ui/Main_menu/Main_menu.tscn" id="8_6y7pd"]
+[ext_resource type="PackedScene" uid="uid://b4ty2tnewtj3o" path="res://Scenes/ui/Main_menu/fade_transition.tscn" id="8_6y7pd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_18r40"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -889,6 +890,7 @@ physics_layer_0/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_bb2iq")
 
 [node name="demo level" type="Node2D" unique_id=1939398483]
+script = ExtResource("1_73nn6")
 
 [node name="Player" parent="." unique_id=1439054031 instance=ExtResource("1_l756w")]
 z_index = 2
@@ -938,14 +940,5 @@ position = Vector2(6, -138)
 z_index = 2
 position = Vector2(208, -85)
 
-[node name="MainMenu" parent="." unique_id=747957155 instance=ExtResource("8_6y7pd")]
+[node name="Fade_transition" parent="." unique_id=1839511524 instance=ExtResource("8_6y7pd")]
 z_index = 2
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -283.5
-offset_top = -160.0
-offset_right = 283.5
-offset_bottom = 160.0
