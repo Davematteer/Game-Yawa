@@ -1033,6 +1033,7 @@ texture = ExtResource("18_igrcy")
 [node name="raytrace" type="Area2D" parent="." unique_id=805847262]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="raytrace" unique_id=375248904]
+visible = false
 position = Vector2(-1, -18)
 shape = SubResource("RectangleShape2D_igrcy")
 
