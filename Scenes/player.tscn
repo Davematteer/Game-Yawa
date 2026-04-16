@@ -18,6 +18,9 @@
 [ext_resource type="Texture2D" uid="uid://s3tw2twocpj3" path="res://sprites/Player/ATTACK 2/attack2_right.png" id="8_fs7ks"]
 [ext_resource type="Texture2D" uid="uid://bpbapsayhjxeh" path="res://sprites/Player/ATTACK 2/attack2_up.png" id="9_l6n3p"]
 [ext_resource type="Texture2D" uid="uid://r5ouh1tvnqgm" path="res://sprites/Shadow.png" id="18_igrcy"]
+[ext_resource type="Script" uid="uid://ep5vjf4003tv" path="res://Scripts/hurtbox.gd" id="18_olqyp"]
+[ext_resource type="Script" uid="uid://b2vycyaepnfqh" path="res://Scripts/health.gd" id="19_fs7ks"]
+[ext_resource type="Script" uid="uid://dfsdbd5bba62h" path="res://Scripts/hitbox.gd" id="20_wpjfl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3uvy8"]
 atlas = ExtResource("2_ukyrk")
@@ -849,6 +852,7 @@ size = Vector2(42, 27)
 size = Vector2(59, 36)
 
 [node name="Player" type="CharacterBody2D" unique_id=1439054031]
+collision_layer = 2
 script = ExtResource("1_f1ek2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=131154776]
@@ -861,6 +865,7 @@ position = Vector2(0, -6)
 shape = SubResource("CircleShape2D_qqcod")
 
 [node name="hurtbox" type="Area2D" parent="." unique_id=691738041]
+script = ExtResource("18_olqyp")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox" unique_id=1895805501]
 position = Vector2(0, -14)
@@ -873,6 +878,7 @@ texture = ExtResource("18_igrcy")
 [node name="Node" type="Node" parent="." unique_id=779226370]
 
 [node name="hit_S" type="Area2D" parent="Node" unique_id=1439086429]
+script = ExtResource("20_wpjfl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/hit_S" unique_id=400444528]
 position = Vector2(-1.5, -3)
@@ -895,6 +901,9 @@ shape = SubResource("RectangleShape2D_l6n3p")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Node/hit_N" unique_id=175347324]
 position = Vector2(-1.5, -26)
 shape = SubResource("RectangleShape2D_olqyp")
+
+[node name="health" type="Node" parent="." unique_id=1602790289]
+script = ExtResource("19_fs7ks")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
