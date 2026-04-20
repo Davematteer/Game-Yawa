@@ -3,7 +3,7 @@ extends CharacterBody2D
 # ---------------------------------------------------
 # MOVEMENT / AI
 # ---------------------------------------------------
-var movement_speed: float = 50.0
+var movement_speed: float = 90.0
 @export var target: Node2D = null
 @export var stop_distance := 25.0
 

@@ -5,7 +5,7 @@ extends CharacterBody2D
 var move_speed: float = 100.0
 var attack_speed_multiplier: float = 0.4
 var dash_speed: float = 400.0
-var dash_duration: float = 0.15
+var dash_duration: float = 0.2
 var dash_cooldown_time: float = 0.3
 var dash_global_cooldown: float = 0.3
 
