@@ -7,11 +7,7 @@ var button_type = null;
 
 func _ready() -> void:
 	MusicPlayer.play_music(preload("res://Audio/Amani_music.mp3"))
-	$Fade_transition.show()
-	$Fade_transition/AnimationPlayer.play("fade_out")
-	await $Fade_transition/AnimationPlayer.animation_finished
-	$Fade_transition.hide()
-	
+
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -43,7 +39,7 @@ func _on_restart_pressed() -> void:
 
 func _on_fade_timer_timeout() -> void:
 	if button_type == "play":
-		get_tree().change_scene_to_file("res://Scenes/main_game.tscn")# Replace with function body.
+		get_tree().change_scene_to_file("res://Scenes/level1.tscn")# Replace with function body.
 	
 	if button_type == "levels":
 		get_tree().change_scene_to_file("res://Scenes/ui/Main_menu/level_menu.tscn")

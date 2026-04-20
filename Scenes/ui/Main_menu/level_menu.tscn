@@ -180,3 +180,4 @@ layout_mode = 1
 [connection signal="pressed" from="control/HBoxContainer/RightButton" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="SelectButton" to="." method="_on_select_button_pressed"]
 [connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]
