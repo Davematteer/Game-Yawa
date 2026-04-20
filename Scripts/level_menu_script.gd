@@ -4,10 +4,7 @@ extends Control
 var button_type = null;
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$Fade_transition.show()
-	$Fade_transition/AnimationPlayer.play("fade_out")
-	await $Fade_transition/AnimationPlayer.animation_finished
-	$Fade_transition.hide()
+	pass
 	
 func _on_home_button_pressed() -> void:
 	button_type = "home";
@@ -25,10 +22,6 @@ func _process(_delta: float) -> void:
 
 
 
-func _on_fade_timer_timeout() -> void:
-	if button_type == "home":
-		get_tree().change_scene_to_file("res://Scenes/ui/Main_menu/Main_menu.tscn")
-		# Replace with function body.
 
 
 
@@ -46,4 +39,10 @@ func _on_left_button_pressed() -> void:
 
 
 
+	
+
+
+func _on_fade_timer_timeout() -> void:
+	if button_type == "home":
+		get_tree().change_scene_to_file("res://Scenes/ui/Main_menu/Main_menu.tscn")
 	
