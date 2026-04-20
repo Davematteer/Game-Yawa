@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bkrqatheqbn7g"]
 
+[ext_resource type="Script" uid="uid://dwlif2jhoe1b8" path="res://Scripts/chest.gd" id="1_8uwsg"]
 [ext_resource type="Texture2D" uid="uid://bxmfvu5wykkgp" path="res://Tiles/L1Map/TX Props.png" id="1_twpm2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8uwsg"]
@@ -88,6 +89,7 @@ _data = {
 }
 
 [node name="Chest" type="Node2D" unique_id=83112387]
+script = ExtResource("1_8uwsg")
 
 [node name="Label" type="Label" parent="." unique_id=1879214003]
 offset_left = -5.0

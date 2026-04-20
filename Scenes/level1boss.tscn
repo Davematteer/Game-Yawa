@@ -1,17 +1,15 @@
-[gd_scene format=4 uid="uid://dxmgkyifdvvh5"]
+[gd_scene format=4 uid="uid://3kdr6c0vv5c7"]
 
-[ext_resource type="Script" uid="uid://dnqx1xwue70wg" path="res://Scripts/main_game.gd" id="1_73nn6"]
-[ext_resource type="PackedScene" uid="uid://bh72373a0a2ui" path="res://Scenes/player.tscn" id="1_l756w"]
-[ext_resource type="Texture2D" uid="uid://dm6cmy7foes7y" path="res://Tiles/L1Map/TX Tileset Grass.png" id="2_0e3vx"]
-[ext_resource type="Texture2D" uid="uid://12imbg3y7l7h" path="res://Tiles/L1Map/TX Tileset Wall.png" id="3_6j5ir"]
-[ext_resource type="Texture2D" uid="uid://bxmfvu5wykkgp" path="res://Tiles/L1Map/TX Props.png" id="4_6j5ir"]
-[ext_resource type="Texture2D" uid="uid://iyk76ks3420v" path="res://Tiles/L1Map/TX Tileset Stone Ground.png" id="4_r0mdn"]
-[ext_resource type="PackedScene" uid="uid://dkalxe8appf30" path="res://Scenes/mage_guardian.tscn" id="6_bb2iq"]
-[ext_resource type="PackedScene" uid="uid://bkrqatheqbn7g" path="res://chest.tscn" id="7_0xqxu"]
-[ext_resource type="PackedScene" uid="uid://dn86vjmw110ec" path="res://Scenes/mutant.tscn" id="7_18r40"]
-[ext_resource type="PackedScene" uid="uid://b4ty2tnewtj3o" path="res://Scenes/ui/Main_menu/fade_transition.tscn" id="8_6y7pd"]
-[ext_resource type="Script" uid="uid://da5q31qola6ov" path="res://Scripts/seeker.gd" id="9_r0mdn"]
-[ext_resource type="PackedScene" uid="uid://dqahtiad2xby1" path="res://Scenes/info.tscn" id="13_c78sm"]
+[ext_resource type="Script" uid="uid://dnqx1xwue70wg" path="res://Scripts/main_game.gd" id="1_kdf4n"]
+[ext_resource type="PackedScene" uid="uid://bh72373a0a2ui" path="res://Scenes/player.tscn" id="2_br6bn"]
+[ext_resource type="Texture2D" uid="uid://dm6cmy7foes7y" path="res://Tiles/L1Map/TX Tileset Grass.png" id="3_jfxi8"]
+[ext_resource type="Texture2D" uid="uid://iyk76ks3420v" path="res://Tiles/L1Map/TX Tileset Stone Ground.png" id="4_i3xhk"]
+[ext_resource type="Texture2D" uid="uid://12imbg3y7l7h" path="res://Tiles/L1Map/TX Tileset Wall.png" id="5_ybqt8"]
+[ext_resource type="Texture2D" uid="uid://bxmfvu5wykkgp" path="res://Tiles/L1Map/TX Props.png" id="6_locso"]
+[ext_resource type="PackedScene" uid="uid://dkalxe8appf30" path="res://Scenes/mage_guardian.tscn" id="9_c4qi2"]
+[ext_resource type="PackedScene" uid="uid://b4ty2tnewtj3o" path="res://Scenes/ui/Main_menu/fade_transition.tscn" id="10_y2gc2"]
+[ext_resource type="PackedScene" uid="uid://dqahtiad2xby1" path="res://Scenes/info.tscn" id="11_sg2bn"]
+[ext_resource type="PackedScene" uid="uid://bkrqatheqbn7g" path="res://chest.tscn" id="12_luw0l"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_73nn6"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -50,7 +48,7 @@ outlines = Array[PackedVector2Array]([PackedVector2Array(-8, -8, 8, -8, 8, 8, -8
 agent_radius = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mgc0q"]
-texture = ExtResource("2_0e3vx")
+texture = ExtResource("3_jfxi8")
 0:0/0 = 0
 0:0/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_73nn6")
 1:0/0 = 0
@@ -565,7 +563,7 @@ texture = ExtResource("2_0e3vx")
 15:15/0/navigation_layer_0/polygon = SubResource("NavigationPolygon_18r40")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xqxu"]
-texture = ExtResource("4_r0mdn")
+texture = ExtResource("4_i3xhk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -773,7 +771,7 @@ sources/0 = SubResource("TileSetAtlasSource_mgc0q")
 sources/1 = SubResource("TileSetAtlasSource_0xqxu")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_18r40"]
-texture = ExtResource("3_6j5ir")
+texture = ExtResource("5_ybqt8")
 2:12/size_in_atlas = Vector2i(8, 4)
 2:12/0 = 0
 2:12/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64.74967, -31.96503, 65.34, -32.428, 65.34, 31.46, -65.29608, 32.511436)
@@ -826,7 +824,7 @@ texture = ExtResource("3_6j5ir")
 8:8/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6y7pd"]
-texture = ExtResource("2_0e3vx")
+texture = ExtResource("3_jfxi8")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -1090,7 +1088,7 @@ sources/0 = SubResource("TileSetAtlasSource_18r40")
 sources/1 = SubResource("TileSetAtlasSource_6y7pd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bb2iq"]
-texture = ExtResource("4_6j5ir")
+texture = ExtResource("6_locso")
 22:16/size_in_atlas = Vector2i(6, 6)
 22:16/0 = 0
 22:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.655006, -33.604263, 10.655014, -33.057854, 24.861687, -25.954514, 39.614777, -12.840656, 45.078888, -11.201424, 45.078888, 8.46936, 40.161194, 15.026291, 21.036812, 30.32579, 9.015778, 35.7899, -11.20142, 36.33631, -22.129635, 31.418617, -37.975544, 22.129631, -47.810936, 10.655006, -45.625298, -9.015781, -33.05785, -21.036816, -18.85117, -28.140156)
@@ -1126,11 +1124,11 @@ physics_layer_0/collision_mask = 2
 sources/1 = SubResource("TileSetAtlasSource_bb2iq")
 
 [node name="demo level" type="Node2D" unique_id=1939398483]
-script = ExtResource("1_73nn6")
+script = ExtResource("1_kdf4n")
 
-[node name="Player" parent="." unique_id=1439054031 instance=ExtResource("1_l756w")]
+[node name="Player" parent="." unique_id=1439054031 instance=ExtResource("2_br6bn")]
 z_index = 2
-position = Vector2(-70, 96)
+position = Vector2(62, 28)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=38383602]
 position = Vector2(5, -4)
@@ -1147,7 +1145,7 @@ tile_map_data = PackedByteArray("AAD2//H/AAAAAAUAAAD2//L/AAADAAEAAAD2//P/AAAAAAU
 tile_set = SubResource("TileSet_bb2iq")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="Tiles" unique_id=551139017]
-tile_map_data = PackedByteArray("AAADAAwAAAACAAwAAAALAAwAAAACAAwAAAATAAwAAAACAAwAAAD7/wwAAAACAAwAAAAYAAwAAAAaAAYAAAD2/wwAAAAYAAYAAAAZAAcAAAASAAIAAAAZAAEAAAASAAIAAAAZAPv/AAASAAIAAAD1/wcAAAAVAAIAAAD1/wEAAAAVAAIAAAD1//v/AAAVAAIAAAD1//X/AAAVAAIAAAD2//H/AAAYAAQAAAAZAPX/AAASAAIAAAAYAPH/AAAaAAQAAAAUAPD/AAAYAAIAACAOAPD/AAAYAAIAACAIAPD/AAAYAAIAACACAPD/AAAYAAIAACD8//D/AAAYAAIAACD7//D/AAAYAAIAACD6//D/AAAYAAIAACD5//D/AAAYAAIAACAGAAwAAAAMAAwAAAAQAAUAAAAJAAIAAAA=")
+tile_map_data = PackedByteArray("AAADAAwAAAACAAwAAAALAAwAAAACAAwAAAATAAwAAAACAAwAAAD7/wwAAAACAAwAAAAYAAwAAAAaAAYAAAD2/wwAAAAYAAYAAAAZAAcAAAASAAIAAAAZAAEAAAASAAIAAAAZAPv/AAASAAIAAAD1/wcAAAAVAAIAAAD1/wEAAAAVAAIAAAD1//v/AAAVAAIAAAD1//X/AAAVAAIAAAD2//H/AAAYAAQAAAAZAPX/AAASAAIAAAAYAPH/AAAaAAQAAAAUAPD/AAAYAAIAACAOAPD/AAAYAAIAACAIAPD/AAAYAAIAACACAPD/AAAYAAIAACD8//D/AAAYAAIAACD7//D/AAAYAAIAACD6//D/AAAYAAIAACD5//D/AAAYAAIAACAGAAwAAAAMAAwAAAA=")
 tile_set = SubResource("TileSet_73nn6")
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="Tiles" unique_id=1331195940]
@@ -1165,36 +1163,17 @@ tile_set = SubResource("TileSet_18r40")
 
 [node name="enemies" type="Node" parent="." unique_id=346266752]
 
-[node name="mutant" parent="enemies" unique_id=1168828391 node_paths=PackedStringArray("target") instance=ExtResource("7_18r40")]
-z_index = 2
-position = Vector2(271, -102)
-script = ExtResource("9_r0mdn")
-target = NodePath("../../Player")
-
-[node name="NavigationAgent2D2" type="NavigationAgent2D" parent="enemies/mutant" unique_id=247454985]
-avoidance_enabled = true
-radius = 132.68
-
-[node name="mutant2" parent="enemies" unique_id=1856739056 node_paths=PackedStringArray("target") instance=ExtResource("7_18r40")]
-position = Vector2(166, -135)
-script = ExtResource("9_r0mdn")
-target = NodePath("../../Player")
-
-[node name="NavigationAgent2D2" type="NavigationAgent2D" parent="enemies/mutant2" unique_id=375194225]
-avoidance_enabled = true
-radius = 132.68
-
 [node name="Djinn" type="Node" parent="." unique_id=1980470405]
 
-[node name="mage guardian" parent="Djinn" unique_id=921066911 instance=ExtResource("6_bb2iq")]
+[node name="mage guardian" parent="Djinn" unique_id=921066911 instance=ExtResource("9_c4qi2")]
 z_index = 2
-position = Vector2(456, -159)
+position = Vector2(50, -93)
 
-[node name="Fade_transition" parent="." unique_id=1839511524 instance=ExtResource("8_6y7pd")]
+[node name="Fade_transition" parent="." unique_id=1839511524 instance=ExtResource("10_y2gc2")]
 z_index = 2
 
-[node name="info" parent="." unique_id=1633229787 instance=ExtResource("13_c78sm")]
+[node name="info" parent="." unique_id=1633229787 instance=ExtResource("11_sg2bn")]
 
-[node name="Chest" parent="." unique_id=83112387 instance=ExtResource("7_0xqxu")]
+[node name="Chest" parent="." unique_id=83112387 instance=ExtResource("12_luw0l")]
 z_index = 1
-position = Vector2(67, 105)
+position = Vector2(268, -219)

@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://22gu2aaayvx7" path="res://sprites/downloaded/mage_guardian_free_creativekind/mage_guardian-blue.png" id="1_dpc5n"]
 [ext_resource type="Texture2D" uid="uid://bdauvj2upfrcx" path="res://sprites/downloaded/mage_guardian_free_creativekind/mage_guardian-red.png" id="2_66qdu"]
+[ext_resource type="Texture2D" uid="uid://bx58op54rdtbg" path="res://Scenes/ui/2cc513924fd144b6b7d49fa369d9b4b4/Bars.png" id="3_66qdu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0d4v1"]
 atlas = ExtResource("1_dpc5n")
@@ -218,6 +219,23 @@ radius = 14.035668
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dpc5n"]
 size = Vector2(29, 54)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_66qdu"]
+atlas = ExtResource("3_66qdu")
+region = Rect2(81.19957, 131.45522, 44.801193, 11.282059)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eug2"]
+atlas = SubResource("AtlasTexture_66qdu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jt87p"]
+texture = SubResource("AtlasTexture_1eug2")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqci0"]
+atlas = ExtResource("3_66qdu")
+region = Rect2(48.06655, 87.67416, 28.985542, 5.499817)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_guyru"]
+texture = SubResource("AtlasTexture_kqci0")
+
 [node name="mage guardian" type="CharacterBody2D" unique_id=921066911]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=766858120]
@@ -225,7 +243,6 @@ position = Vector2(0, -28)
 sprite_frames = SubResource("SpriteFrames_1eug2")
 animation = &"first"
 autoplay = "first"
-frame_progress = 0.6931378
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1899809914]
 position = Vector2(0, -12)
@@ -236,3 +253,24 @@ shape = SubResource("CircleShape2D_dpc5n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=428078162]
 position = Vector2(0.5, -31)
 shape = SubResource("RectangleShape2D_dpc5n")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=183864274]
+
+[node name="ProgressBar" type="ProgressBar" parent="CanvasLayer" unique_id=1037986104]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -224.0
+offset_top = -38.0
+offset_right = 218.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_styles/background = SubResource("StyleBoxTexture_jt87p")
+theme_override_styles/fill = SubResource("StyleBoxTexture_guyru")
+max_value = 20.0
+value = 20.0
+show_percentage = false
